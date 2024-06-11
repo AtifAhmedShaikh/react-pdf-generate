@@ -21,12 +21,13 @@ const MyApp2 = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App text-center">
       <header className="bg-blue-500 text-white p-4 text-center">
         <h1 className="text-2xl">React PDF Generator</h1>
       </header>
       <main className="p-4 flex justify-center">
-        <div className="w-[85%] mx-auto bg-white dark:bg-gray-700 rounded-md shadow-md overflow-hidden" ref={printRef}>
+        {/* <div className="w-[85%] mx-auto bg-white dark:bg-gray-700 rounded-md shadow-md overflow-hidden" ref={printRef}> */}
+        <div className="w-[50%] mx-auto bg-white dark:bg-gray-700 rounded-md shadow-md overflow-hidden" ref={printRef}>
           <div className="px-4 py-2">
             <div className="flex flex-col justify-center gap-3">
               <span className="flex justify-center">
@@ -95,20 +96,26 @@ const MyApp2 = () => {
               </table>
             </div>
           </div>
-          <img src="https://example.com/qr-code.png" alt="QR Code" width="200px" height="200px" />
+          <img src="/atif.png" alt="QR Code" width="200px" height="200px" />
           <div className="bg-gray-100 dark:bg-gray-600 px-2 py-4 m-5">
             <p className="text-sm text-gray-600 dark:text-gray-300">
               This is an automated email. Please do not reply to this message.
             </p>
           </div>
         </div>
-        <button
+        {/* <button
           onClick={generatePDF}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
         >
           Download PDF
-        </button>
+        </button> */}
       </main>
+      <button
+        onClick={generatePDF}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-4 mx-10"
+      >
+        Download PDF
+      </button>
     </div>
   );
 };
